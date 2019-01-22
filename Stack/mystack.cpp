@@ -40,6 +40,10 @@ void Stack<T>::push(T const& element){
 
 template<class T>
 void Stack<T>::pop(){
+	if(topNode == NULL){
+		cout << "Error: The stack is empty" << endl;
+		exit(0);
+	}
 	node *auxNode = topNode;
 	topNode = topNode->nextNode;
 	delete auxNode;
