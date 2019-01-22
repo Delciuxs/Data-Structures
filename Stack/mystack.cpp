@@ -41,8 +41,7 @@ void Stack<T>::push(T const& element){
 
 template<class T>
 void Stack<T>::pop(){
-	node *auxNode = new node();
-	auxNode = topNode;
+	node *auxNode = topNode;
 	topNode = topNode->nextNode;
 	delete auxNode;
 	sizeStack--;
