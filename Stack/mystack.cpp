@@ -5,13 +5,12 @@ using namespace std;
 template<class T>
 Stack<T>::Stack(){
 	sizeStack = 0;
-	topNode = new node();
-	topNode->nextNode = NULL;
+	topNode = NULL;
 }
 
 template<class T>
 bool Stack<T>::empty(){
-	if(topNode->nextNode == NULL)
+	if(topNode == NULL)
 		return true;
 	return false;
 }
@@ -23,7 +22,7 @@ int Stack<T>::size(){
 
 template<class T>
 T Stack<T>::top(){
-	if(topNode->nextNode == NULL){
+	if(topNode == NULL){
 		cout << "Error: The stack is empty" << endl;
 		exit(0);
 	}
